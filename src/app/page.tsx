@@ -343,14 +343,15 @@ const Home: React.FC = () => {
         </div>
 
         {/* Scroll to Top Arrow */}
-        <div className="fixed bottom-8 right-8">
+        <div className="fixed bottom-4 right-4 z-50">
           <Link
             href="#"
-            className="text-darkNavy hover:text-darkGold transition-colors duration-300"
+            className="bg-darkGold text-white p-3 rounded-full shadow-lg hover:bg-darkGold-light transition-colors duration-300 flex items-center justify-center"
+            aria-label="Przewiń do góry"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-12 w-12"
+              className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -442,16 +443,19 @@ const Home: React.FC = () => {
       <section className="bg-white py-16">
         <div className="container mx-auto px-4">
           <div className="flex justify-center">
-            <iframe
-              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61556579010353&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=589832485920704"
-              width="500"
-              height="600"
-              style={{ border: "none", overflow: "hidden" }}
-              scrolling="no"
-              frameBorder="0"
-              allowFullScreen={true}
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-            ></iframe>
+            <div className="w-full max-w-[500px]">
+              <div className="relative pb-[100%] h-0">
+                <iframe
+                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61556579010353&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=589832485920704"
+                  className="absolute top-0 left-0 w-full h-full"
+                  style={{ border: "none", overflow: "hidden" }}
+                  scrolling="no"
+                  frameBorder="0"
+                  allowFullScreen={true}
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                ></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </section>
