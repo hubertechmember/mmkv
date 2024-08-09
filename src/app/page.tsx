@@ -460,7 +460,17 @@ const Home: React.FC = () => {
       <footer className="bg-darkGold text-white py-8" ref={contactRef}>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-            {/* ... (zachowaj inne elementy stopki) */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-4">
+                MMK BIURO RACHUNKOWE - IZABELA TOWPIK
+              </h3>
+              <p className="mb-2">NIP: 9730928311</p>
+              <p className="mb-2">REGON: 527337007</p>
+              <p className="mb-2">ul. Batorego 95a/1, 65-735 Zielona Góra</p>
+              <p className="text-sm mt-4">
+                © 2024 Volani. Wszelkie prawa zastrzeżone.
+              </p>
+            </div>
             <div className="flex justify-center">
               <div className="grid grid-cols-2 gap-4">
                 <a
@@ -472,7 +482,6 @@ const Home: React.FC = () => {
                   <MessengerLogo size={32} color="white" />
                   <span className="ml-2">Messenger</span>
                 </a>
-
                 <a
                   href="https://wa.me/48605467936"
                   target="_blank"
@@ -505,7 +514,6 @@ const Home: React.FC = () => {
                   </svg>
                   <span className="ml-2">WhatsApp</span>
                 </a>
-
                 <a
                   href="mailto:kontakt@biuro-towpik.pl"
                   className="p-2 rounded-full transition-all duration-300 hover:bg-white hover:bg-opacity-20 flex items-center"
@@ -513,7 +521,6 @@ const Home: React.FC = () => {
                   <Mail size={32} color="white" />
                   <span className="ml-2">Email</span>
                 </a>
-
                 <a
                   href="tel:+48605467936"
                   className="p-2 rounded-full transition-all duration-300 hover:bg-white hover:bg-opacity-20 flex items-center"
@@ -523,7 +530,19 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </div>
-            {/* ... (zachowaj pozostałe elementy stopki) */}
+            <div className="flex flex-col items-center">
+              <h4 className="text-xl font-semibold mb-4">Znajdź nas online</h4>
+              <a
+                href="https://www.facebook.com/profile.php?id=61556579010353"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full transition-all duration-300 hover:bg-white hover:bg-opacity-20 flex items-center"
+              >
+                <Facebook size={32} color="white" />
+                <span className="ml-2">Facebook</span>
+              </a>
+              {/* Możesz dodać więcej linków do mediów społecznościowych tutaj */}
+            </div>
           </div>
         </div>
       </footer>
