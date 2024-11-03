@@ -114,7 +114,7 @@ const Home: React.FC = () => {
   return (
     <main className={inter.className}>
       {/* Sticky Navigation */}
-      <nav className="sticky top-0 bg-white shadow-md py-4 z-50">
+      <nav className="fixed top-0 left-0 right-0 bg-white shadow-md py-4 z-50">
         <ul className="flex justify-center space-x-8">
           {navItems.map((item) => (
             <li key={item.name}>
@@ -220,43 +220,6 @@ const Home: React.FC = () => {
         id="o-nas"
         className="relative min-h-screen w-full bg-gray-100 py-16 overflow-hidden"
       >
-        {/* Sticky Navigation */}
-        <nav className="sticky top-0 bg-white shadow-md py-4 z-10">
-          <ul className="flex justify-center space-x-8">
-            {navItems.map((item) => (
-              <li key={item.name}>
-                <Link
-                  href={item.href}
-                  className={`text-[18px] leading-[28px] tracking-[1px] transition-all duration-300 ${
-                    item.name === "O NAS"
-                      ? "text-darkNavy underline font-bold"
-                      : "text-gray-600 hover:text-darkNavy"
-                  }`}
-                  style={{
-                    fontFamily:
-                      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
-                    textDecorationColor:
-                      item.name === "O NAS" ? "#000080" : "transparent",
-                    textDecorationThickness: "1px",
-                    textUnderlineOffset: "4px",
-                  }}
-                >
-                  <span
-                    className={`hover:font-semibold ${
-                      item.name === "O NAS" ? "font-bold" : "font-normal"
-                    }`}
-                    style={{
-                      color: item.name === "O NAS" ? "#000080" : "inherit",
-                    }}
-                  >
-                    {item.name}
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
         {/* Background Shapes */}
         <div className="absolute inset-0 z-0">
           <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
