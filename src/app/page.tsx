@@ -3,12 +3,27 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Inter } from "next/font/google";
+import { Lato } from "next/font/google";
 import Carousel from "./Carousel";
 import MessengerLogo from "./MessengerLogo";
 import { Facebook, Phone, Mail, MessageCircle } from "lucide-react";
 import { useRef } from "react";
-const inter = Inter({ subsets: ["latin"] });
+import AnimatedTagline from "./AnimatedTagline";
+
+const latoLight = Lato({ weight: "300", subsets: ["latin"] });
+const latoHairline = Lato({ weight: "100", subsets: ["latin"] });
+
+const BrandTitle = () => {
+  return (
+    <h1 className="text-white text-[48px] leading-[58px] mb-2 text-center">
+      <span className={`${latoLight.className} block`}>BIURO RACHUNKOWE</span>
+      <span className="text-[32px] block text-center tracking-wider">
+        <span className={`${latoHairline.className}`}>IZABELA</span>{" "}
+        <span className={`${latoLight.className}`}>TOWPIK</span>
+      </span>
+    </h1>
+  );
+};
 
 const navItems = [
   { name: "O NAS", href: "#o-nas" },
@@ -33,7 +48,7 @@ const services = [
     title: "NIEUSTANNE DOSKONALENIE",
     description:
       "Inwestujemy w ciągły rozwój naszego zespołu. Regularnie aktualizujemy naszą wiedzę o zmianach w przepisach i najnowszych trendach w księgowości, aby zapewnić naszym klientom najwyższą jakość usług.",
-    images: ["/1.png", "/2.png", "/3.png"], // Replace single image with array of images
+    images: ["/1.png", "/2.png", "/3.png"],
   },
 ];
 
@@ -104,7 +119,7 @@ const Home: React.FC = () => {
     const throttledHandleScroll = throttle(handleScroll, 100);
 
     window.addEventListener("scroll", throttledHandleScroll);
-    handleScroll(); // Call once to set initial active section
+    handleScroll();
 
     return () => {
       window.removeEventListener("scroll", throttledHandleScroll);
@@ -112,7 +127,7 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <main className={inter.className}>
+    <main className={latoLight.className}>
       {/* Sticky Navigation */}
       <nav className="fixed top-0 left-0 right-0 bg-white shadow-md py-4 z-50">
         <ul className="flex justify-center space-x-8">
@@ -126,8 +141,6 @@ const Home: React.FC = () => {
                     : "text-gray-600 hover:text-darkNavy"
                 }`}
                 style={{
-                  fontFamily:
-                    '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
                   textDecorationColor:
                     activeSection === item.href.slice(1)
                       ? "#000080"
@@ -159,33 +172,40 @@ const Home: React.FC = () => {
 
       {/* Hero Section */}
       <div className="relative h-screen w-full">
-        <Image
-          src="/path-to-your-image.jpg"
-          alt="Background"
-          fill
-          style={{ objectFit: "cover" }}
-          quality={100}
-          priority
-        />
+        <picture>
+          {/* Mobile image */}
+          <source
+            media="(max-width: 768px)"
+            srcSet="/path-to-your-images.jpg"
+          />
+          {/* Desktop image */}
+          <Image
+            src="/path-to-your-image.png"
+            alt="Background"
+            fill
+            style={{ objectFit: "cover" }}
+            quality={100}
+            priority
+          />
+        </picture>
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col">
           <div className="flex-grow flex flex-col items-center justify-center">
-            <h1
-              className="text-white text-[48px] font-light leading-[58px] mb-2 text-center"
-              style={{
-                fontFamily:
-                  '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
-              }}
-            >
-              MMK BIURO RACHUNKOWE
-              <br />
-              <span className="text-[32px] font-light block text-center tracking-wider">
-                IZABELA TOWPIK
-              </span>
-            </h1>
+            {/* Logo */}
+            <div className="w-40 md:w-56 lg:w-64 mb-8">
+              {" "}
+              {/* Responsive width */}
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width={256}
+                height={256}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
+            <BrandTitle />
             <div className="h-8"></div>
-            <p className="text-white text-[18px] font-semibold leading-[28px] max-w-2xl text-center mb-4">
-              OTRZYMAJ BEZPŁATNĄ WYCENĘ USŁUG
-            </p>
+            <AnimatedTagline />
             <button
               className="text-white px-6 py-2 rounded-full text-[16px] font-medium mt-2"
               style={{ backgroundColor: "#b8860b" }}
@@ -340,7 +360,7 @@ const Home: React.FC = () => {
                 role: "IT Product Owner",
                 image: "/hubert.jpg",
                 quote:
-                  "Dotychczas korzystałem z usług jednego z największych w Polsce biur księgowości. Wszystko było fajnie, dopóki nie miałem pytań. W MMK doświadczyłem klientocentrycznego podejścia jakie sam stosuję w swojej codziennej pracy i dzięki temu mam nadzieję na wieloletnią współpracę.",
+                  "Dotychczas korzystałem z usług jednego z największych w Polsce biur księgowości. Wszystko było fajnie, dopóki nie miałem pytań. U doświadczyłem klientocentrycznego podejścia jakie sam stosuję w swojej codziennej pracy i dzięki temu mam nadzieję na wieloletnią współpracę.",
               },
               {
                 name: "Ola W.",
@@ -429,7 +449,7 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-semibold mb-4">
-                MMK BIURO RACHUNKOWE - IZABELA TOWPIK
+                BIURO RACHUNKOWE - IZABELA TOWPIK
               </h3>
               <p className="mb-2">NIP: 9730928311</p>
               <p className="mb-2">REGON: 527337007</p>
