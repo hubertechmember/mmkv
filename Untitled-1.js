@@ -35,12 +35,12 @@ const detailedServices = [
   {
     title: "Książka Przychodów i Rozchodów (KPiR)",
     description:
-      "Profesjonalne prowadzenie Książki Przychodów i Rozchodów to podstawa rzetelnej księgowości dla małych i średnich przedsiębiorstw. Nasz zespół ekspertów zadba o prawidłowe ewidencjonowanie wszystkich operacji gospodarczych, zapewniając zgodność z aktualnymi przepisami podatkowymi. Oferujemy nie tylko bieżące prowadzenie KPiR, ale również doradztwo w zakresie optymalizacji podatkowej oraz przygotowanie niezbędnych deklaracji i sprawozdań.",
+      "Profesjonalne prowadzenie Książki Przychodów i Rozchodów to podstawa rzetelnej księgowości dla małych i średnich przedsiębiorstw. Nasz zespół ekspertów zadba o prawidłowe ewidencjonowanie wszystkich operacji gospodarczych, zapewniając zgodność z aktualnymi przepisami podatkowymi. Oferujemy nie tylko bieżące prowadzenie KPiR, ale również przygotowanie niezbędnych deklaracji i sprawozdań.",
   },
   {
     title: "Ryczałt od Przychodów Ewidencjonowanych",
     description:
-      "Dla przedsiębiorców wybierających uproszczoną formę opodatkowania, oferujemy kompleksową obsługę ryczałtu od przychodów ewidencjonowanych. Nasz serwis obejmuje prowadzenie ewidencji przychodów, kalkulację należnego podatku, przygotowywanie i składanie deklaracji podatkowych oraz doradztwo w zakresie korzystania z ulg i odliczeń. Zapewniamy pełne wsparcie, aby ta forma opodatkowania była dla Państwa jak najbardziej korzystna i bezproblemowa.",
+      "Dla przedsiębiorców wybierających uproszczoną formę opodatkowania, oferujemy kompleksową obsługę ryczałtu od przychodów ewidencjonowanych. Nasz serwis obejmuje prowadzenie ewidencji przychodów, kalkulację należnego podatku, przygotowywanie i składanie deklaracji podatkowych. Zapewniamy pełne wsparcie, aby ta forma opodatkowania była dla Państwa jak najbardziej korzystna i bezproblemowa.",
   },
   {
     title: "Zwrot VAT z Zagranicy",
@@ -55,7 +55,7 @@ const detailedServices = [
   {
     title: "Pomoc przy Zakładaniu Działalności Gospodarczej",
     description:
-      "Rozpoczęcie własnej działalności gospodarczej to ekscytujący, ale często skomplikowany proces. Oferujemy kompleksowe wsparcie na każdym etapie zakładania firmy. Od wyboru optymalnej formy prawnej i opodatkowania, przez przygotowanie niezbędnej dokumentacji, rejestrację w urzędach, aż po doradztwo w zakresie pozyskiwania finansowania i optymalizacji kosztów początkowych. Nasi eksperci pomogą Państwu pewnie stawiać pierwsze kroki w świecie biznesu, minimalizując ryzyko błędów i maksymalizując szanse na sukces.",
+      "Rozpoczęcie własnej działalności gospodarczej to ekscytujący, ale często skomplikowany proces. Oferujemy kompleksowe wsparcie na każdym etapie zakładania firmy. Od wyboru optymalnej formy prawnej i opodatkowania, przez przygotowanie niezbędnej dokumentacji, rejestrację w urzędach. Nasi eksperci pomogą Państwu pewnie stawiać pierwsze kroki w świecie biznesu, minimalizując ryzyko błędów i maksymalizując szanse na sukces.",
   },
 ];
 
