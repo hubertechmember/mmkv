@@ -3,31 +3,97 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --canvas: #ffffff;
+  --surface: #f8fafc;
+  --ink: #0f172a;
+  --coal: #1e293b;
+  --card: #ffffff;
+  --sand: #334155;
+  --muted: #64748b;
+  --gold: #b88939;
+  --goldlight: #d4a853;
+  --golddeep: #8c651f;
+  --goldsoft: #fdf8ed;
+  --line: #e2e8f0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  scroll-behavior: auto; /* Lenis */
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #ffffff;
+  color: #0f172a;
+  font-feature-settings: "ss01" on;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+::selection {
+  background: #fdf8ed;
+  color: #b88939;
+}
+
+:focus-visible {
+  outline: 2px solid #b88939;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+
+  .kicker {
+    @apply font-sans text-[11px] font-bold uppercase sm:text-xs text-gold;
+    letter-spacing: 0.2em;
+  }
+
+  .gold-text {
+    color: #b88939;
+  }
+
+  .hairline {
+    background: #e2e8f0;
+    height: 1px;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .marquee-track {
+    animation: marquee 36s linear infinite;
+  }
+  .marquee-slow {
+    animation-duration: 55s;
+  }
+  .marquee-paused:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
