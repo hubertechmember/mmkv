@@ -162,12 +162,12 @@ export default function About() {
                 >
                   Umów rozmowę z Izabelą
                 </a>
-                <a
+                {/* <a
                   href="#cennik"
                   className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-slate-800 hover:bg-slate-50 transition-all shadow-xs"
                 >
                   Przelicz koszty
-                </a>
+                </a> */}
               </div>
             </Reveal>
           </div>

@@ -19,7 +19,7 @@ export const site = {
 export const nav = [
   { label: "Usługi", href: "#uslugi" },
   { label: "KSeF", href: "#ksef" },
-  { label: "Wycena", href: "#cennik" },
+  // { label: "Wycena", href: "#cennik" },
   { label: "O mnie", href: "#o-mnie" },
   { label: "Opinie", href: "#opinie" },
   { label: "Aktualności", href: "#aktualnosci" },

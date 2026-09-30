@@ -147,14 +147,14 @@ export default function Services() {
             lead="Od książki przychodów i ryczałtu po spółki z o.o., kadry, płace i KSeF. Wybierz to, czego potrzebujesz — lub powierz nam całość i skup się na rozwoju firmy."
           />
 
-          <Reveal delay={0.1}>
+          {/* <Reveal delay={0.1}>
             <a
               href="#cennik"
               className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-slate-800 hover:bg-slate-50 hover:border-slate-400 shadow-sm transition-all"
             >
               Kalkulator współpracy &rarr;
             </a>
-          </Reveal>
+          </Reveal> */}
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-6">

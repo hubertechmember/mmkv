@@ -5,7 +5,7 @@ import Marquee from "../components/Marquee";
 import ValueProps from "../components/ValueProps";
 import Services from "../components/Services";
 import Ksef from "../components/Ksef";
-import PricingCalculator from "../components/PricingCalculator";
+// import PricingCalculator from "../components/PricingCalculator";
 import Process from "../components/Process";
 import About from "../components/About";
 import Testimonials from "../components/Testimonials";
@@ -26,7 +26,7 @@ export default function Home() {
         <ValueProps />
         <Services />
         <Ksef />
-        <PricingCalculator />
+        {/* <PricingCalculator /> */}
         <Process />
         <About />
         <Testimonials />

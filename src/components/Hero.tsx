@@ -4,7 +4,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Magnetic from "./ui/Magnetic";
 import { site } from "../data/site";
-import { ShieldCheck, ArrowRight, Award, CheckCircle2, Phone, Calculator, Clock } from "lucide-react";
+import { ShieldCheck, ArrowRight, Award, CheckCircle2, Phone, /* Calculator, */ Clock } from "lucide-react";
 
 const ease: [number, number, number, number] = [0.21, 0.65, 0.35, 1];
 
@@ -102,7 +102,7 @@ export default function Hero() {
               </a>
             </Magnetic>
 
-            <Magnetic>
+            {/* <Magnetic>
               <a
                 href="#cennik"
                 className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-7 py-3.5 text-xs sm:text-sm font-semibold uppercase tracking-[0.12em] text-slate-800 transition-all duration-200 hover:bg-slate-50 hover:border-slate-400 shadow-sm"
@@ -110,7 +110,7 @@ export default function Hero() {
                 <Calculator className="h-4 w-4 text-gold" />
                 Sprawdź cennik
               </a>
-            </Magnetic>
+            </Magnetic> */}
 
             <Magnetic>
               <a
